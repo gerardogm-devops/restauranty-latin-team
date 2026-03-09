@@ -14,7 +14,7 @@ services:
       - "3001:3001"
     environment:
       - SECRET=MySecret1!
-      - MONGODB_URI=mongodb://mongo:27017/resturanty
+      - MONGODB_URI=mongodb://mongo:27017/restauranty
       - CLOUD_NAME=${CLOUD_NAME}
       - CLOUD_API_KEY=${CLOUD_API_KEY}
       - CLOUD_API_SECRET=${CLOUD_API_SECRET}
@@ -28,7 +28,7 @@ services:
       - "3002:3002"
     environment:
       - SECRET=MySecret1!
-      - MONGODB_URI=mongodb://mongo:27017/resturanty
+      - MONGODB_URI=mongodb://mongo:27017/restauranty
       - CLOUD_NAME=${CLOUD_NAME}
       - CLOUD_API_KEY=${CLOUD_API_KEY}
       - CLOUD_API_SECRET=${CLOUD_API_SECRET}
@@ -42,7 +42,7 @@ services:
       - "3003:3003"
     environment:
       - SECRET=MySecret1!
-      - MONGODB_URI=mongodb://mongo:27017/resturanty
+      - MONGODB_URI=mongodb://mongo:27017/restauranty
       - CLOUD_NAME=${CLOUD_NAME}
       - CLOUD_API_KEY=${CLOUD_API_KEY}
       - CLOUD_API_SECRET=${CLOUD_API_SECRET}
