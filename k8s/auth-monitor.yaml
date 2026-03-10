@@ -1,0 +1,19 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: auth-monitor
+  namespace: monitoring   # ¡importante! va en el namespace de Prometheus
+  labels:
+    release: prometheus    # etiqueta que kube-prometheus-stack usa para descubrirlos
+spec:
+  selector:
+    matchLabels:
+      app: auth            # debe coincidir con el label del Deployment de auth
+  namespaceSelector:
+    matchNames:
+      - default            # si tus deployments están en default
+  endpoints:
+  - port: http             # nombre del puerto en el Service (puedes cambiarlo si expones /metrics en otro puerto)
+    path: /metrics         # ruta donde tu backend expone métricas Prometheus (si no tienes aún, es opcional por ahora)
+    interval: 30s
+    scheme: http
