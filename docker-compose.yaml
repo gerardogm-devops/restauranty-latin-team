@@ -1,0 +1,71 @@
+services:
+  mongo:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+
+  auth:
+    build: ./backend/auth
+    ports:
+      - "3001:3001"
+    environment:
+      - SECRET=MySecret1!
+      - MONGODB_URI=mongodb://mongo:27017/restauranty
+      - CLOUD_NAME=${CLOUD_NAME}
+      - CLOUD_API_KEY=${CLOUD_API_KEY}
+      - CLOUD_API_SECRET=${CLOUD_API_SECRET}
+      - PORT=3001
+    depends_on:
+      - mongo
+
+  discounts:
+    build: ./backend/discounts
+    ports:
+      - "3002:3002"
+    environment:
+      - SECRET=MySecret1!
+      - MONGODB_URI=mongodb://mongo:27017/restauranty
+      - CLOUD_NAME=${CLOUD_NAME}
+      - CLOUD_API_KEY=${CLOUD_API_KEY}
+      - CLOUD_API_SECRET=${CLOUD_API_SECRET}
+      - PORT=3002
+    depends_on:
+      - mongo
+
+  items:
+    build: ./backend/items
+    ports:
+      - "3003:3003"
+    environment:
+      - SECRET=MySecret1!
+      - MONGODB_URI=mongodb://mongo:27017/restauranty
+      - CLOUD_NAME=${CLOUD_NAME}
+      - CLOUD_API_KEY=${CLOUD_API_KEY}
+      - CLOUD_API_SECRET=${CLOUD_API_SECRET}
+      - PORT=3003
+    depends_on:
+      - mongo
+
+  frontend:
+    build: ./client
+    ports:
+      - "3000:80"
+    environment:
+      - REACT_APP_SERVER_URL=http://localhost:80
+
+  haproxy:
+    image: haproxy:latest
+    ports:
+      - "80:80"
+    volumes:
+      - ./haproxy-docker.cfg:/usr/local/etc/haproxy/haproxy.cfg:ro
+    depends_on:
+      - auth
+      - discounts
+      - items
+      - frontend
+
+volumes:
+  mongo-data:

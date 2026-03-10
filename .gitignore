@@ -7,3 +7,9 @@ server/.env
 backend/*/.env
 backend/*/node_modules
 mobile/.expo
+.env
+.terraform/
+terraform/.terraform/
+terraform/terraform.tfstate
+terraform/terraform.tfstate.backup
+terraform/*.tfstate*
