@@ -9,7 +9,7 @@ function HomePage() {
   const { user } = useContext(AuthContext);
 
   const cards = [
-    { title: "Items", description: "Manage your menu items", icon: <BiListUl className="text-3xl text-primary-600" />, link: "/items" },
+    { title: "platos", description: "Manage your menu items", icon: <BiListUl className="text-3xl text-primary-600" />, link: "/items" },
     { title: "Coupons", description: "Create and manage discount codes", icon: <BiSolidDiscount className="text-3xl text-primary-600" />, link: "/discounts/coupons" },
     { title: "Campaigns", description: "Run marketing campaigns", icon: <MdCampaign className="text-3xl text-primary-600" />, link: "/discounts/campaigns" },
     { title: "Categories", description: "Organize your menu categories", icon: <BiSolidCategoryAlt className="text-3xl text-primary-600" />, link: "/dietary" },
