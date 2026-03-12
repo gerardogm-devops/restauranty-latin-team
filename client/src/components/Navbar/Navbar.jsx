@@ -25,7 +25,7 @@ function Navbar() {
       {user ? (
         <div className="px-6 py-3 mx-4 mb-2 bg-sidebar-light rounded-xl">
           <p className="text-yellow-400 text-xs font-medium uppercase tracking-wider mb-1">Bienvenido</p>
-          <p className="text-primary font-semibold text-sm">{user.name} {user.surname}</p>
+          <p className="text-3xl font-semibold text-sm">{user.name} {user.surname}</p>
         </div>
       ) : (
         <div className="px-6 py-3 mx-4 mb-2">
@@ -61,7 +61,7 @@ function Navbar() {
                   <button className={menuItemClass('/discounts/campaigns')}><MdCampaign className="icons" />Ofertas</button>
                 </Link>
                 <Link to="/createcampaign">
-                  <button className={menuItemClass('/createcampaign')}><BiListPlus className="icons" />Promociones exclusivas para ti</button>
+                  <button className={menuItemClass('/createcampaign')}><BiListPlus className="icons" />Promociones exclusivas</button>
                 </Link>
               </div>
             )}
