@@ -8,7 +8,7 @@ function ProfilePage() {
 
   return (
     <div className="py-6">
-      <h1 className="text-3xl font-bold text-gray-800 mb-6">Profile</h1>
+      <h1 className="text-3xl font-bold text-gray-800 mb-6">Perfil</h1>
 
       <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 max-w-lg">
         <div className="flex items-center mb-6">

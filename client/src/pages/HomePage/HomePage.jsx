@@ -19,7 +19,7 @@ function HomePage() {
     <div className="py-6">
       <div className="mb-8">
         <h1 className="text-3xl font-bold text-primary-800">
-          {user ? `Hello, ${user.name}!` : 'Restauranty Latino'}
+          {user ? `Hola, ${user.name}!` : 'Restauranty Latino'}
         </h1>
         <p className="text-yellow-500 mt-2">👋 Bienvenido a tu restaurante Latino {"\u{1F1F5}\u{1F1EA}"} {"\u{1F1F2}\u{1F1FD}"}</p>
       </div>
