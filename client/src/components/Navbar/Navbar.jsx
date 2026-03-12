@@ -29,7 +29,7 @@ function Navbar() {
         </div>
       ) : (
         <div className="px-6 py-3 mx-4 mb-2">
-          <p className="text-slate-400 text-sm">Welcome to Restauranty</p>
+          <p className="text-slate-400 text-sm">Bienvenido a Restauranty</p>
         </div>
       )}
 
@@ -94,12 +94,12 @@ function Navbar() {
         <div className="mt-6 px-6 space-y-2">
           <Link to="/login">
             <button className="w-full py-3 bg-primary-600 text-white rounded-xl font-semibold text-sm hover:bg-primary-700 transition-all duration-200 shadow-sm">
-              Login
+              Sesión
             </button>
           </Link>
           <Link to="/signup">
             <button className="w-full py-3 bg-transparent text-slate-300 border border-slate-500 rounded-xl font-semibold text-sm hover:bg-sidebar-light hover:text-white transition-all duration-200 mt-2">
-              Register
+              Registro
             </button>
           </Link>
         </div>
