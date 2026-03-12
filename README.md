@@ -1,4 +1,4 @@
-# Restauranty
+# Restauranty Latino
 
 A restaurant management platform built with a **microservices architecture**: 3 Node.js/Express backends + a React frontend, unified behind HAProxy path-based routing.
 
