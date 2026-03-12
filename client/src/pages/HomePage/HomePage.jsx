@@ -9,19 +9,19 @@ function HomePage() {
   const { user } = useContext(AuthContext);
 
   const cards = [
-    { title: "Items", description: "Manage your menu items", icon: <BiListUl className="text-3xl text-primary-600" />, link: "/items" },
-    { title: "Coupons", description: "Create and manage discount codes", icon: <BiSolidDiscount className="text-3xl text-primary-600" />, link: "/discounts/coupons" },
-    { title: "Campaigns", description: "Run marketing campaigns", icon: <MdCampaign className="text-3xl text-primary-600" />, link: "/discounts/campaigns" },
-    { title: "Categories", description: "Organize your menu categories", icon: <BiSolidCategoryAlt className="text-3xl text-primary-600" />, link: "/dietary" },
+    { title: "Menú", description: "Añade y edita platos del menú", icon: <BiListUl className="text-3xl text-primary-600" />, link: "/items" },
+    { title: "Cupones", description: "Obtén códigos de descuento", icon: <BiSolidDiscount className="text-3xl text-primary-600" />, link: "/discounts/coupons" },
+    { title: "Ofertas", description: "Entra en nuetras promociones y descuentos", icon: <MdCampaign className="text-3xl text-primary-600" />, link: "/discounts/campaigns" },
+    { title: "Categorías", description: "Organiza el menú por categorías", icon: <BiSolidCategoryAlt className="text-3xl text-primary-600" />, link: "/dietary" },
   ];
 
   return (
     <div className="py-6">
       <div className="mb-8">
-        <h1 className="text-3xl font-bold text-gray-800">
-          {user ? `Hello, ${user.name}!` : 'Dashboard'}
+        <h1 className="text-3xl font-bold text-primary-800">
+          {user ? `Hello, ${user.name}!` : 'Restauranty Latino'}
         </h1>
-        <p className="text-gray-500 mt-2">Welcome to your restaurant management dashboard.</p>
+        <p className="text-yellow-500 mt-2">👋 Bienvenido a tu restaurante Latino 🇵🇪 🇲🇽</p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">

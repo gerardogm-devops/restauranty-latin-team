@@ -46,8 +46,8 @@ function SignupPage() {
     <div className="MainSignup">
       <div className="SignupPage">
         <div className="text-center mb-6">
-          <h1 className="text-3xl font-bold text-gray-800 mb-2">Create Account</h1>
-          <p className="text-gray-500 text-sm">Join Restauranty and start managing your menu</p>
+          <h1 className="text-3xl font-bold text-gray-800 mb-2">Crear una cuenta</h1>
+          <p className="text-gray-500 text-sm">Únete a Restauranty y empieza a elegir tu menú</p>
         </div>
 
         <form onSubmit={handleSignupSubmit}>
@@ -57,32 +57,32 @@ function SignupPage() {
                 <div className="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none">
                   <FaCircleUser className="w-[1rem] h-[1rem] text-gray-400" />
                 </div>
-                <input className="input-forms" type="text" name="name" placeholder="First Name" value={name} onChange={handleName} />
+                <input className="input-forms" type="text" name="name" placeholder="Nombre" value={name} onChange={handleName} />
               </div>
               <div className="relative">
                 <div className="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none">
                   <FaRegCircleUser className="w-[1rem] h-[1rem] text-gray-400" />
                 </div>
-                <input className="input-forms" type="text" name="surname" placeholder="Last Name" value={surname} onChange={handleSurname} />
+                <input className="input-forms" type="text" name="surname" placeholder="Apellido" value={surname} onChange={handleSurname} />
               </div>
             </div>
             <div className="relative mb-3">
               <div className="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none">
                 <MdEmail className="w-[1.1rem] h-[1.1rem] text-gray-400" />
               </div>
-              <input className="input-forms" type="email" name="email" placeholder="Email address" value={email} onChange={handleEmail} />
+              <input className="input-forms" type="email" name="email" placeholder="Dirección de Email" value={email} onChange={handleEmail} />
             </div>
             <div className="relative mb-3">
               <div className="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none">
                 <FaLocationDot className="w-[1rem] h-[1rem] text-gray-400" />
               </div>
-              <input className="input-forms" type="text" name="address" placeholder="Address" value={address} onChange={handleAddress} />
+              <input className="input-forms" type="text" name="address" placeholder="Dirección" value={address} onChange={handleAddress} />
             </div>
             <div className="relative mb-3">
               <div className="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none">
                 <FaPhoneFlip className="w-[1rem] h-[1rem] text-gray-400" />
               </div>
-              <input className="input-forms" type="text" name="phoneNumber" placeholder="Phone Number" value={phoneNumber} onChange={handlephoneNumber} />
+              <input className="input-forms" type="text" name="phoneNumber" placeholder="Número de teléfono" value={phoneNumber} onChange={handlephoneNumber} />
             </div>
             <div className="relative mb-2">
               <div className="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none">
@@ -90,7 +90,7 @@ function SignupPage() {
               </div>
               <input
                 className="input-forms"
-                placeholder="Password"
+                placeholder="Contraseña"
                 type="password"
                 name="password"
                 value={password}
@@ -98,10 +98,10 @@ function SignupPage() {
               />
             </div>
             {errorMessage && <p className="error-message">{errorMessage}</p>}
-            <button className="button w-full" type="submit">Create Account</button>
+            <button className="button w-full" type="submit">Crear una cuenta</button>
 
-            <p className="text-gray-500 text-sm mt-2">Already have an account?</p>
-            <Link to={"/login"}><p className="sign-up-link text-sm mt-1">Sign in</p></Link>
+            <p className="text-gray-500 text-sm mt-2">¿Ya tienes una cuenta?</p>
+            <Link to={"/login"}><p className="sign-up-link text-sm mt-1">Inicia sesión</p></Link>
           </div>
         </form>
       </div>

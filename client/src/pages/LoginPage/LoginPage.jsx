@@ -35,8 +35,8 @@ function LoginPage() {
     <div className="mainlogin">
       <div className="LoginPage">
         <div className="text-center mb-6">
-          <h1 className="text-3xl font-bold text-gray-800 mb-2">Welcome Back</h1>
-          <p className="text-gray-500 text-sm">Sign in to manage your restaurant</p>
+          <h1 className="text-3xl font-bold text-gray-800 mb-2">Bienvenido</h1>
+          <p className="text-gray-500 text-sm">Inicia sesión en tu restaurante Latino favorito</p>
         </div>
 
         <form id="form" onSubmit={handleLoginSubmit}>
@@ -45,7 +45,7 @@ function LoginPage() {
               <div className="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none">
                 <MdEmail className="w-[1.1rem] h-[1.1rem] text-gray-400" />
               </div>
-              <input className="input-forms" type="email" name="email" placeholder="Email address" value={email} onChange={handleEmail} />
+              <input className="input-forms" type="email" name="email" placeholder="Dirección de Email" value={email} onChange={handleEmail} />
             </div>
             <div className="relative mb-2">
               <div className="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none">
@@ -55,15 +55,15 @@ function LoginPage() {
                 className="input-forms"
                 type="password"
                 name="password"
-                placeholder="Password"
+                placeholder="Contraseña"
                 value={password}
                 onChange={handlePassword}
               />
             </div>
             {errorMessage && <p className="error-message">{errorMessage}</p>}
-            <button className="button w-full" type="submit">Sign In</button>
-            <p className="text-gray-500 text-sm mt-2">Don't have an account yet?</p>
-            <Link to={"/signup"}><p className="sign-up-link text-sm mt-1">Create an account</p></Link>
+            <button className="button w-full" type="submit">Inicia sesión</button>
+            <p className="text-gray-500 text-sm mt-2">¿Aún no tienes una cuenta?</p>
+            <Link to={"/signup"}><p className="sign-up-link text-sm mt-1">Crear una cuenta</p></Link>
           </div>
         </form>
       </div>
