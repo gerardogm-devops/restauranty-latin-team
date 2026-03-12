@@ -21,7 +21,7 @@ function HomePage() {
         <h1 className="text-3xl font-bold text-primary-800">
           {user ? `Hola, ${user.name}!` : 'Restauranty Latino'}
         </h1>
-        <p className="text-yellow-500 mt-2 flex items-center gap-1">
+        <p className="text-yellow-500 mt-2">
           👋 Bienvenido a tu restaurante Latino
           <img src="https://flagcdn.com/pe.svg" alt="Bandera de Perú" className="inline h-5 w-7" />
           <img src="https://flagcdn.com/mx.svg" alt="Bandera de México" className="inline h-5 w-7" />
