@@ -16,6 +16,7 @@ spec:
       containers:
         - name: discounts
           image: cesarboada/restauranty:discounts
+          imagePullPolicy: Always
           ports:
             - containerPort: 3002
           env:
