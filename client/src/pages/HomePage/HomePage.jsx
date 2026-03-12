@@ -11,7 +11,7 @@ function HomePage() {
   const cards = [
     { title: "Menú", description: "Añade y edita platos del menú", icon: <BiListUl className="text-3xl text-primary-600" />, link: "/items" },
     { title: "Cupones", description: "Obtén códigos de descuento", icon: <BiSolidDiscount className="text-3xl text-primary-600" />, link: "/discounts/coupons" },
-    { title: "Ofertas", description: "Entra en nuetras promociones y descuentos", icon: <MdCampaign className="text-3xl text-primary-600" />, link: "/discounts/campaigns" },
+    { title: "Ofertas", description: "Entra en nuestras promociones y descuentos", icon: <MdCampaign className="text-3xl text-primary-600" />, link: "/discounts/campaigns" },
     { title: "Categorías", description: "Organiza el menú por categorías", icon: <BiSolidCategoryAlt className="text-3xl text-primary-600" />, link: "/dietary" },
   ];
 
@@ -21,7 +21,7 @@ function HomePage() {
         <h1 className="text-3xl font-bold text-primary-800">
           {user ? `Hello, ${user.name}!` : 'Restauranty Latino'}
         </h1>
-        <p className="text-yellow-500 mt-2">👋 Bienvenido a tu restaurante Latino 🇵🇪 🇲🇽</p>
+        <p className="text-yellow-500 mt-2">👋 Bienvenido a tu restaurante Latino {"\u{1F1F5}\u{1F1EA}"} {"\u{1F1F2}\u{1F1FD}"}</p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
