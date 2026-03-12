@@ -16,6 +16,7 @@ spec:
       containers:
         - name: frontend
           image: cesarboada/restauranty:frontend
+          imagePullPolicy: Always
           ports:
             - containerPort: 80
 ---
